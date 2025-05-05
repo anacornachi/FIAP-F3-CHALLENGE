@@ -29,10 +29,12 @@ Enterprise Challenge - Solução para a Hermes Reply - Plataforma inteligente de
 
 ## Justificativa do Problema & Descrição da Solução
 
-</b>Problema</b>
+**Problema**
+
 Interrupções inesperadas em linhas de produção industrial causam perdas financeiras e operacionais significativas. A baixa previsibilidade e reação tardia a falhas em máquinas elevam custos de manutenção corretiva, reduzem a eficiência e impactam a produtividade.
 
-</b>Solução Proposta</b>
+**Solução Proposta**
+
 Desenvolver uma </b>plataforma inteligente de manutenção preditiva</b>. Essa plataforma irá monitorar equipamentos em tempo real, detectar anomalias operacionais, prever falhas de máquinas antes que elas ocorram e sugerir ações preventivas por meio de </b>dashboards intuitivos e relatórios automáticos</b>. Tudo isso baseado em algoritmos avançados de Inteligência Artificial (Machine Learning) e integrando sensores via IoT.
 
 ## Definição das Tecnologias
@@ -46,6 +48,67 @@ Desenvolver uma </b>plataforma inteligente de manutenção preditiva</b>. Essa p
 | Visualização/Relatórios | Power BI, Tableau, Dash (Plotly), Streamlit | Dashboards interativos e relatórios automatizados para visualização clara e tomada de decisão rápida |
 | Notificações / Alertas | AWS SNS (Simple Notification Service), E-mail, SMS, Teams/Slack | AWS SNS permite envio automatizado e escalável de alertas em múltiplos canais |
 | Gestão e Versionamento do Projeto | GitHub, README estruturado | Colaboração e versionamento do código/documentação |
+
+## Pipeline de Dados & Arquitetura da Solução
+
+**Esboço do Pipeline**
+1. Coleta dos Dados
+   - Dados gerados por sensores (protótipo: ESP32), simulados usando arquivos CSV recebidos.
+   - Envio dos dados via MQTT para um broker central.
+2. Ingestão & Armazenamento
+   - Recepção via API (Flask/FastAPI).
+   - Armazenamento inicial em banco de dados relacional (PostgreSQL na nuvem/local).
+   - Armazenamento dos arquivos brutos em Amazon S3.
+3. Processamento & Pré-processamento
+   - Limpeza e engenharia de atributos com Python (Pandas).
+   - Pipeline automatizada para preparação dos dados.
+4. Análise & Modelagem Preditiva
+   - Desenvolvimento e treinamento de modelos de Machine Learning (Scikit-learn, Keras, TensorFlow, R).
+   - Geração de modelos para detecção de anomalias, classificação de falhas, predição de vida útil e manutenção preditiva.
+5. Visualização & Alertas
+   - Dashboards responsivos (Dash, Power BI, Tableau) com insights em tempo real.
+   - Alertas automáticos enviados (e-mail, SMS, integrações) para os responsáveis.
+6. Recomendações & Relatórios
+   - Relatórios detalhados com recomendações de manutenção.
+   - APIs para geração e consulta dos relatórios personalizados.
+
+## Justificativa do Banco de Dados em Nuvem
+- **Escalabilidade:** Solução preparada para crescimento, com mais sensores e mais linhas de produção.
+- **Resiliência e Backup:** Dados protegidos em casos de falhas locais.
+- **Facilidade de Integração:** Serviços nativos da AWS/Azure facilitam o uso de Machine Learning e notificações.
+- **Custo-Benefício:** Escalabilidade de recursos conforme a demanda real.
+
+## Modelo da Arquitetura  
+
+![Arquitetura_Hermes Reply drawio](https://github.com/user-attachments/assets/c59678c0-1853-4614-9674-1d1c5c5c30f8)
+
+## Estratégia de Coleta de Dados
+- Etapa inicial: Utilização de arquivos CSV simulando a coleta dos sensores reais.
+- Etapas seguintes: Integração com sensores ESP32 para coleta de dados em tempo real (prototipagem).
+- Envio dos dados via MQTT simulando o fluxo dos eventos sensoriais para a API de ingestão.
+
+## Plano Inicial de Desenvolvimento e Divisão de Responsabilidades
+
+| ÁREA | RESPONSÁVEL | RESPONSABILIDADE |
+| ------------- | ------------- | ------------- |
+| Coleta & Simulação de Dados | Ana | Prototipar dados com ESP32/CSV, simular envio via MQTT |
+| Ingestão & Armazenamento | Carla | Desenvolvimento da API, modelagem do banco de dados e integração com S3/RDS |
+| Pipeline de Dados & Pré-processo | Lucas | Scripts de processamento, análise inicial dos dados |
+| Modelos de IA | Ana | Construção, treinamento e teste dos modelos preditivos |
+| Dashboards & Visualização | Carla | Desenvolvimento de dashboards e relatório automáticos |
+| Alertas & Notificações | Lucas | Configuração de alertas automáticos e integrações com SNS/E-mail/SMS |
+| Documentação & GitHub | Todos | README, documentação técnica, organização das entregas e versionamento |
+
+## Referências
+
+**Link Úteis**
+
+- www.reply.com
+- aws.amazon.com
+- azure.microsoft.com
+- app.diagrams.net
+- streamlit.io
+- dash.plotly.com
 
 ## 📁 Estrutura de pastas
 
@@ -67,7 +130,7 @@ Dentre os arquivos e pastas presentes na raiz do projeto, definem-se:
 
 ## 🔧 Como executar o código
 
-_Acrescentar as informações necessárias sobre pré-requisitos (IDEs, serviços, bibliotecas etc.) e instalação básica do projeto, descrevendo eventuais versões utilizadas. Colocar um passo a passo de como o leitor pode baixar o seu código e executá-lo a partir de sua máquina ou seu repositório. Considere a explicação organizada em fase._
+_Não existem scripts para serem executados neste repositorio_
 
 ## 🗃 Histórico de lançamentos
 
