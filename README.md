@@ -7,16 +7,15 @@
 <br>
 
 # Nome do projeto
+Enterprise Challenge - Solução para a Hermes Reply - Plataforma inteligente de manutenção preditiva
 
 ## Nome do grupo
 
 ## 👨‍🎓 Integrantes:
 
-- <a href="https://www.linkedin.com/">Alice Marinho</a>
 - <a href="https://www.linkedin.com/in/anacornachi/">Ana Cornachi</a>
 - <a href="https://www.linkedin.com/in/carlamaximo/">Carla Máximo</a>
 - <a href="https://www.linkedin.com/in/lucas-lins-lima/">Lucas Lins</a>
-- <a href="https://www.linkedin.com/in/lucas-francelino-31a41233b/">Lucas Francelino<a>
 
 ## 👩‍🏫 Professores:
 
@@ -28,9 +27,25 @@
 
 - <a href="https://www.linkedin.com/in/andregodoichiovato/">André Godoi Chiovato</a>
 
-## 📜 Descrição
+## Justificativa do Problema & Descrição da Solução
 
-_Descreva seu projeto com base no texto do PBL (até 600 palavras)_
+</b>Problema</b>
+Interrupções inesperadas em linhas de produção industrial causam perdas financeiras e operacionais significativas. A baixa previsibilidade e reação tardia a falhas em máquinas elevam custos de manutenção corretiva, reduzem a eficiência e impactam a produtividade.
+
+</b>Solução Proposta</b>
+Desenvolver uma </b>plataforma inteligente de manutenção preditiva</b>. Essa plataforma irá monitorar equipamentos em tempo real, detectar anomalias operacionais, prever falhas de máquinas antes que elas ocorram e sugerir ações preventivas por meio de </b>dashboards intuitivos e relatórios automáticos</b>. Tudo isso baseado em algoritmos avançados de Inteligência Artificial (Machine Learning) e integrando sensores via IoT.
+
+## Definição das Tecnologias
+
+| FINALIDADE | TECNOLOGIA PROPOSTA | JUSTIFICATIVA |
+| ------------- | ------------- | ------------- |
+| Programação/Análise de Dados/IA | Python, Pandas, Scikit-learn, TensorFlow, Keras, R | Python é referência para dados e IA; Pandas/Scikit-learn para preprocessamento e modelos tradicionais; TensorFlow/Keras para Deep Learning; R para análises extras |
+| Coleta dos Dados (IoT) | ESP32, MQTT | ESP32 é acessível para prototipagem e facilita o envio de dados via MQTT (padrão de mercado para IoT) |
+| Armazenamento de Dados | PostgreSQL/AWS RDS, arquivos CSV, Amazon S3 | PostgreSQL/AWS RDS é robusto e escalável; S3 atende ao armazenamento de arquivos brutos; CSVs usados nos estágios iniciais |
+| Processamento e Integração | AWS EC2 (ou Azure VM), scripts Python, APIs Flask/FastAPI | EC2/Azure para processamento escalável na nuvem; Flask/FastAPI para criação de APIs simples e integráveis |
+| Visualização/Relatórios | Power BI, Tableau, Dash (Plotly), Streamlit | Dashboards interativos e relatórios automatizados para visualização clara e tomada de decisão rápida |
+| Notificações / Alertas | AWS SNS (Simple Notification Service), E-mail, SMS, Teams/Slack | AWS SNS permite envio automatizado e escalável de alertas em múltiplos canais |
+| Gestão e Versionamento do Projeto | GitHub, README estruturado | Colaboração e versionamento do código/documentação |
 
 ## 📁 Estrutura de pastas
 
@@ -56,11 +71,7 @@ _Acrescentar as informações necessárias sobre pré-requisitos (IDEs, serviço
 
 ## 🗃 Histórico de lançamentos
 
-- ## 0.5.0 - XX/XX/2024
-- ## 0.4.0 - XX/XX/2024
-- ## 0.3.0 - XX/XX/2024
-- ## 0.2.0 - XX/XX/2024
-- ## 0.1.0 - XX/XX/2024
+- ## 0.1.0 - 05/05/2025
 
 ## 📋 Licença
 
