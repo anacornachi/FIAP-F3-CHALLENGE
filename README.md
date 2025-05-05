@@ -130,7 +130,7 @@ Dentre os arquivos e pastas presentes na raiz do projeto, definem-se:
 
 ## 🔧 Como executar o código
 
-_Não existem scripts para serem executados neste repositorio_
+_Não existem scripts para serem executados neste repositório_
 
 ## 🗃 Histórico de lançamentos
 
