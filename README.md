@@ -134,7 +134,7 @@ _Não existem scripts para serem executados neste repositório_
 
 ## 🗃 Histórico de lançamentos
 
-- ## 0.1.0 - 05/05/2025
+* 0.1.0 - 05/05/2025
 
 ## 📋 Licença
 
