@@ -95,7 +95,7 @@ Com o Amazon CloudWatch, conseguimos:
 
 ## Modelo da Arquitetura  
 
-![Arquitetura_Hermes Reply drawio](https://github.com/user-attachments/assets/c59678c0-1853-4614-9674-1d1c5c5c30f8)
+![Arquitetura_Hermes Reply drawio](https://github.com/user-attachments/assets/2bd08d75-2dde-4477-adf8-7d44e9342ab9)
 
 ## Estratégia de Coleta de Dados
 - Etapa inicial: Utilização de arquivos CSV simulando a coleta dos sensores reais.
