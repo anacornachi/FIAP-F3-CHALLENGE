@@ -43,7 +43,7 @@ Desenvolver uma </b>plataforma inteligente de manutenção preditiva</b>. Essa p
 | ------------- | ------------- | ------------- |
 | Programação/Análise de Dados/IA | Python, Pandas, Scikit-learn, TensorFlow, Keras, R | Python é referência para dados e IA; Pandas/Scikit-learn para preprocessamento e modelos tradicionais; TensorFlow/Keras para Deep Learning; R para análises extras |
 | Coleta dos Dados (IoT) | ESP32, MQTT | ESP32 é acessível para prototipagem e facilita o envio de dados via MQTT (padrão de mercado para IoT) |
-| Armazenamento de Dados | PostgreSQL/AWS RDS, arquivos CSV, Amazon S3, cloud watch da amazon | PostgreSQL/AWS RDS ou cloud watch da amazon é robusto e escalável; S3 atende ao armazenamento de arquivos brutos; CSVs usados nos estágios iniciais |
+| Armazenamento de Dados | PostgreSQL/AWS RDS, arquivos CSV, Amazon S3 | PostgreSQL/AWS RDS é robusto e escalável; S3 atende ao armazenamento de arquivos brutos; CSVs usados nos estágios iniciais |
 | Processamento e Integração | AWS EC2 (ou Azure VM), scripts Python, APIs Flask/FastAPI | EC2/Azure para processamento escalável na nuvem; Flask/FastAPI para criação de APIs simples e integráveis |
 | Visualização/Relatórios | Power BI, Tableau, Dash (Plotly), Streamlit | Dashboards interativos e relatórios automatizados para visualização clara e tomada de decisão rápida |
 | Notificações / Alertas | AWS SNS (Simple Notification Service), E-mail, SMS, Teams/Slack | AWS SNS permite envio automatizado e escalável de alertas em múltiplos canais |
@@ -57,7 +57,7 @@ Desenvolver uma </b>plataforma inteligente de manutenção preditiva</b>. Essa p
    - Envio dos dados via MQTT para um broker central.
 2. Ingestão & Armazenamento
    - Recepção via API (Flask/FastAPI).
-   - Armazenamento inicial em banco de dados relacional (PostgreSQL ou cloud watch da amazon na nuvem/local).
+   - Armazenamento inicial em banco de dados relacional (PostgreSQL na nuvem/local).
    - Armazenamento dos arquivos brutos em Amazon S3.
 3. Processamento & Pré-processamento
    - Limpeza e engenharia de atributos com Python (Pandas).
