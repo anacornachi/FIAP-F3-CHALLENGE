@@ -35,7 +35,7 @@ Interrupções inesperadas em linhas de produção industrial causam perdas fina
 
 **Solução Proposta**
 
-Desenvolver uma </b>plataforma inteligente de manutenção preditiva</b>. Essa plataforma irá monitorar equipamentos em tempo real, detectar anomalias operacionais, prever falhas de máquinas antes que elas ocorram e sugerir ações preventivas por meio de </b>dashboards intuitivos e relatórios automáticos</b>. Tudo isso baseado em algoritmos avançados de Inteligência Artificial (Machine Learning) e integrando sensores via IoT.
+Desenvolver uma **plataforma inteligente de manutenção preditiva**. Essa plataforma irá monitorar equipamentos em tempo real, detectar anomalias operacionais, prever falhas de máquinas antes que elas ocorram e sugerir ações preventivas por meio de **dashboards intuitivos e relatórios automáticos**. Tudo isso baseado em algoritmos avançados de Inteligência Artificial (Machine Learning) e integrando sensores via IoT.
 
 ## Definição das Tecnologias
 
@@ -47,6 +47,7 @@ Desenvolver uma </b>plataforma inteligente de manutenção preditiva</b>. Essa p
 | Processamento e Integração | AWS EC2 (ou Azure VM), scripts Python, APIs Flask/FastAPI | EC2/Azure para processamento escalável na nuvem; Flask/FastAPI para criação de APIs simples e integráveis |
 | Visualização/Relatórios | Power BI, Tableau, Dash (Plotly), Streamlit | Dashboards interativos e relatórios automatizados para visualização clara e tomada de decisão rápida |
 | Notificações / Alertas | AWS SNS (Simple Notification Service), E-mail, SMS, Teams/Slack | AWS SNS permite envio automatizado e escalável de alertas em múltiplos canais |
+| Monitoramento da Aplicação | Amazon CloudWatch | Monitoramento em tempo real dos recursos, coleta de métricas, geração de logs e dashboards integrados para acompanhar performance e detectar anomalias |
 | Gestão e Versionamento do Projeto | GitHub, README estruturado | Colaboração e versionamento do código/documentação |
 
 ## Pipeline de Dados & Arquitetura da Solução
@@ -68,9 +69,23 @@ Desenvolver uma </b>plataforma inteligente de manutenção preditiva</b>. Essa p
 5. Visualização & Alertas
    - Dashboards responsivos (Dash, Power BI, Tableau) com insights em tempo real.
    - Alertas automáticos enviados (e-mail, SMS, integrações) para os responsáveis.
-6. Recomendações & Relatórios
+6. Monitoramento da Aplicação
+   - Utilização do Amazon CloudWatch para monitorar métricas, logs, saúde dos principais recursos cloud e aplicação.
+   - Definição de alarmes para eventos críticos, como aumento anormal no uso de recursos, falhas em APIs, ou alterações suspeitas em bancos de dados.
+   - Integração com o sistema de alertas para resposta rápida a incidentes.
+7. Recomendações & Relatórios
    - Relatórios detalhados com recomendações de manutenção.
    - APIs para geração e consulta dos relatórios personalizados.
+
+## Monitoramento da Aplicação com Amazon CloudWatch
+O monitoramento faz parte essencial da solução para garantir a operação, facilitar o diagnóstico e aumentar a confiabilidade do sistema.
+
+Com o Amazon CloudWatch, conseguimos:
+- Monitorar recursos cloud (EC2, RDS, S3): rastreamento de métricas como uso de CPU, memória, espaço em disco, conexões de banco de dados e acessos a buckets.
+- Coletar logs de aplicação e APIs: todos os acessos, erros e eventos relevantes ficam centralizados e fáceis de analisar.
+- Criar dashboards customizáveis: visão consolidada da saúde e performance de todos os componentes da solução.
+- Configurar alarmes automáticos: identificação de anomalias ou eventos críticos (ex: API fora do ar, queda de desempenho, uso acima do normal), gerando alertas imediatamente para o time.
+- Integrar com SNS/E-mail/SMS: notificações de incidentes chegam rapidamente pela integração com o sistema de alertas já adotado.
 
 ## Justificativa do Banco de Dados em Nuvem
 - **Escalabilidade:** Solução preparada para crescimento, com mais sensores e mais linhas de produção.
@@ -97,6 +112,7 @@ Desenvolver uma </b>plataforma inteligente de manutenção preditiva</b>. Essa p
 | Modelos de IA | Ana | Construção, treinamento e teste dos modelos preditivos |
 | Dashboards & Visualização | Carla | Desenvolvimento de dashboards e relatório automáticos |
 | Alertas & Notificações | Lucas | Configuração de alertas automáticos e integrações com SNS/E-mail/SMS |
+| Monitoramento | Todos | Configuração e acompanhamento do Amazon CloudWatch, integração de métricas e alarmes com a equipe |
 | Documentação & GitHub | Todos | README, documentação técnica, organização das entregas e versionamento |
 
 ## Referências
